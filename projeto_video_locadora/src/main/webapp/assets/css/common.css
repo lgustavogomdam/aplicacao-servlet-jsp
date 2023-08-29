@@ -1,0 +1,111 @@
+
+/*===================================| Variaveis |=====================================*/
+
+:root{
+    --bg-primary-color: #521336;
+    --bg-secondary-color: #ffedf6;
+    --primary-color: #ff008c;
+    --secondary-color: #FFF;
+    --btn-hover: #ff008c43;
+}
+
+/*==================================| Document |===============================================*/
+
+* {
+    /* margin: 0 !important;
+    padding: 0 !important; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    color: var(--secondary-color) !important;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*==================================| Header |==================================================*/
+
+.header{
+    background-color: var(--bg-primary-color) !important;
+}
+
+.logotipo_img{
+    width: auto;
+    height: 60px;
+}
+
+.container-logotipo{
+    width: 100vw !important;
+    height: 10%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-toggler{
+    background-color: #ffffff32 !important;
+
+}
+.navbar-brand{
+    font-weight: bold !important;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: end !important;
+    align-content: end;
+    flex-wrap: nowrap;
+}
+
+#navbarNavAltMarkup, .collapse navbar-collapse{
+    width: 50%;
+    justify-content: end !important;
+}
+
+/*=======================================| Main |==============================================================*/
+
+.container-main{
+    width: 80vw;
+    height: 40vh;
+    margin: 2vh auto;
+}
+
+/*======================================| Botoes |=============================================================*/
+
+.btn-primary{
+    background-color: #ff008c !important;
+    border: none !important;
+    color: var(--secondary-color);
+
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-hover)!important;
+}
+
+
+.btn-secondary{
+    background-color: #7a345b !important;
+    border: none !important;
+}
+
+.btn-secondary:hover{
+    background-color: var(--btn-hover) !important;
+}
+
+.btn{
+    padding: 0;
+    width: auto;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+    box-sizing: border-box;
+    font-weight: bold !important;
+    border-radius: 10px !important;
+}

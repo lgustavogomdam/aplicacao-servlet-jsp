@@ -1,0 +1,144 @@
+@import './common.css';
+
+/*============================================| Tabela |===============================================*/
+
+.table{
+    margin-top: 5vh;
+    text-align: center;
+}
+
+.table thead th{
+    background-color: var(--bg-primary-color) !important;
+    color: var(--secondary-color) !important;
+
+}
+.table tbody tr td , th{
+    color: var(--primary-color) !important;
+}
+
+
+.table thead th:nth-child(1){
+    border-radius: 20px 0px 0px 0px;
+}
+
+.tabela-ator thead th:nth-child(3){
+    border-radius: 0px 20px 0px 0px;
+}
+
+.tabela-classe thead th:nth-child(5){
+    border-radius: 0px 20px 0px 0px;
+}
+
+.td-option {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.td-option img {
+    width: auto;
+    height: 100%;
+    padding: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+/*==========================================| Modal |==============================================================*/
+
+.modal-header{
+    background-color: var(--bg-primary-color) !important;
+}
+
+.modal-header h1 {
+    font-weight: bold !important;
+}
+
+/*=======================================| Form-Modal-AtorEntity |============================================================*/
+
+.form-ator{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-ator .content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: baseline;
+    gap: 0.5rem;
+}
+
+.form-ator .content label{
+    color: var(--bg-primary-color) !important;
+    font-weight: bold;
+}
+
+.form-ator .content .form-control{
+    width: 100% !important;
+    height: 30% !important;
+    padding: 0 !important;
+    font-size: 1rem;
+    color: var(--bg-primary-color) !important;
+    box-sizing: border-box;
+    background-color: var(--bg-secondary-color);
+}
+
+.form-ator .form-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+/*==============================================| Form-Modal-Classe |=========================================*/
+
+.form-classe{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-classe .content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: baseline;
+    gap: 0.5rem;
+}
+
+.form-classe .content label{
+    color: var(--bg-primary-color) !important;
+    font-weight: bold;
+}
+
+.form-classe .content .form-control{
+    width: 100% !important;
+    height: 15% !important;
+    padding: 0 !important;
+    font-size: 1rem;
+    color: var(--bg-primary-color) !important;
+    box-sizing: border-box;
+    background-color: var(--bg-secondary-color);
+}
+
+.form-classe .form-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
