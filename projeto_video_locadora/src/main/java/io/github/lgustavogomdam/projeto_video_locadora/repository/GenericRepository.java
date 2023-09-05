@@ -1,10 +1,7 @@
 package io.github.lgustavogomdam.projeto_video_locadora.repository;
 
 import java.util.List;
-import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -59,7 +56,7 @@ public abstract class GenericRepository {
         }
     }
 
-    public void excluir(Object obj) throws HibernateException {
+    public boolean excluir(Object obj) throws HibernateException {
         Session sessao = null;
 
         try {
@@ -78,6 +75,7 @@ public abstract class GenericRepository {
             }
             throw new HibernateException(erro);
         }
+        return true;
     }
 
 

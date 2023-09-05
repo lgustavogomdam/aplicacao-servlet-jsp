@@ -13,11 +13,14 @@ public class AtorEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "primeiro_nome", length = 25, updatable = true, nullable = false)
+    @Column(name = "primeiro_nome", length = 25, nullable = false)
     private String primeiroNome;
 
-    @Column(name = "ultimo_nome", length = 25, updatable = true, nullable = false)
+    @Column(name = "ultimo_nome", length = 25, nullable = false)
     private String ultimoNome;
+
+    public AtorEntity() {
+    }
 
     public AtorEntity(Long id, String primeiroNome, String ultimoNome) {
         this.id = id;
@@ -33,19 +36,19 @@ public class AtorEntity implements Serializable {
         return this.id;
     }
 
-    public String getprimeiroNome() {
+    public String getPrimeiroNome() {
         return this.primeiroNome;
     }
 
-    public void setprimeiroNome(String primeiroNome) {
-        primeiroNome = primeiroNome;
+    public void setPrimeiroNome(String primeiroNome) {
+        this.primeiroNome = primeiroNome;
     }
 
-    public String getultimoNome() {
+    public String getUltimoNome() {
         return this.ultimoNome;
     }
 
-    public void setultimoNome(String ultimoNome) {
-        ultimoNome = ultimoNome;
+    public void setUltimoNome(String ultimoNome) {
+        this.ultimoNome = ultimoNome;
     }
 }

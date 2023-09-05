@@ -1,5 +1,7 @@
 package io.github.lgustavogomdam.projeto_video_locadora.repository;
 
+import io.github.lgustavogomdam.projeto_video_locadora.model.entities.AtorEntity;
+import io.github.lgustavogomdam.projeto_video_locadora.service.AtorService;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
@@ -11,8 +13,7 @@ import java.util.List;
 
 public class AtorRepository extends GenericRepository{
 
-    public List<Object> pesquisarNome(String primeiroNome, String ultimoNome, Class classe) throws HibernateException {
-
+    public List<AtorEntity> pesquisarNome(String primeiroNome, String ultimoNome) throws HibernateException {
         List lista = null;
         Session sessao = null;
         try {
@@ -21,19 +22,17 @@ public class AtorRepository extends GenericRepository{
 
             // Construtor da CONSULTA
             CriteriaBuilder builder = sessao.getCriteriaBuilder();
-            CriteriaQuery consulta = builder.createQuery( classe );
+            CriteriaQuery consulta = builder.createQuery( AtorEntity.class );
 
             // FROM
-            Root tabela = consulta.from(classe);
+            Root tabela = consulta.from(AtorEntity.class);
 
             // RESTRIÇÕES
             Predicate restricoes = null;
 
-            if(!primeiroNome.isEmpty() && !primeiroNome.equals(""))
-                throw new HibernateException("Parâmetros de pesquisa inválido!");
-
-            restricoes = builder.like(tabela.get("primeiro_nome"), primeiroNome + "%" );
-            restricoes = builder.like(tabela.get("ultimo_nome"), ultimoNome + "%");
+            restricoes = builder.like(tabela.get("primeiroNome"), primeiroNome + "%" );
+            if (ultimoNome != null)
+                restricoes = builder.like(tabela.get("ultimoNome"), ultimoNome + "%" );
 
             consulta.where(restricoes);
             lista = sessao.createQuery(consulta).getResultList();
